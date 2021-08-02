@@ -1,29 +1,193 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <form id="formu">
+      <div class="row lg bg-secondary">
+        <h1>Payment form example</h1>
       </div>
-    </div>
+      <div class="alert alert-danger" role="alert">
+        Some fields are missing
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <label for="CardNumber">Card #</label>
+          <input
+            type="text"
+            class="form-control"
+            id="CardNumber"
+            placeholder="XXXXXXXXXXXXXXXX"
+            required
+          />
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="CVC">CVC #</label>
+          <input
+            type="text"
+            class="form-control"
+            id="CVC"
+            placeholder="XXXX"
+            required
+          />
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="Amount">Amount</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Amount"
+            placeholder="Amount"
+            required
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="FirstName">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="FirstName"
+            placeholder="First Name"
+            required
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="LastName">Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="LastName"
+            placeholder="Last Name"
+            required
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="City">City</label>
+          <input
+            type="text"
+            class="form-control"
+            id="City"
+            placeholder="City"
+            required
+          />
+        </div>
+        <div class="col-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Pick a State</option>
+            <option value="1">Arica y Parinacota</option>
+            <option value="2">Tarapacá</option>
+            <option value="3">Antofagasta</option>
+            <option value="4">Atacama</option>
+            <option value="5">Coquimbo</option>
+            <option value="6">Valparaíso</option>
+            <option value="7">Metropolitana de Santiago</option>
+            <option value="8">Libertador General Bernardo O’Higgins</option>
+            <option value="9">Maule</option>
+            <option value="10">Ñuble</option>
+            <option value="11">Biobío</option>
+            <option value="12">La Araucanía</option>
+            <option value="13">Los Ríos</option>
+            <option value="14">Los Lagos</option>
+            <option value="15"
+              >Aysén del General Carlos Ibáñez del Campo</option
+            >
+            <option value="16">Magallanes y la Antártica Chilena</option>
+          </select>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="PostalCode">Postal Code</label>
+          <input type="text" class="form-control" id="PostalCode" required />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 d-flex">
+          <div class="form-check">
+            <label><strong>We accept:</strong></label>
+            <ul class="d-flex list-unstyled">
+              <li>
+                <input
+                  class="form-check"
+                  type="radio"
+                  name="TypeofCards"
+                  id="MasterCard"
+                  value="option1"
+                  checked
+                />
+                <i class="fab fa-cc-mastercard"></i>
+              </li>
+              <li>
+                <input
+                  class="form-check"
+                  type="radio"
+                  name="TypeofCards"
+                  id="Visa"
+                  value="option2"
+                />
+                <i class="fab fa-cc-visa"></i>
+              </li>
+              <li>
+                <input
+                  class="form-check"
+                  type="radio"
+                  name="TypeofCards"
+                  id="Dinner"
+                  value="option3"
+                />
+                <i class="fab fa-cc-diners-club"></i>
+              </li>
+              <li>
+                <input
+                  class="form-check"
+                  type="radio"
+                  name="TypeofCards"
+                  id="Amex"
+                  value="option4"
+                />
+                <i class="fab fa-cc-amex"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Example textarea</label>
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+            ></textarea>
+            <p class="text-secondary">add some notes here</p>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-row-reverse">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="cancel" class="btn btn-secondary">Cancel</button>
+      </div>
+    </form>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/app.js"></script>
   </body>
 </html>
